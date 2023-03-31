@@ -5,13 +5,13 @@ import java.util.List;
 
 public class Generics {
 
-    public  <T> List boxingMethod(T name) {
-        List firstList = new ArrayList<>();
-        firstList.add(name);
-        List secondList = new ArrayList<>();
-        secondList.add(firstList);
-        return secondList;
-    }
+    public  <T> List<List<T>> boxingMethod(T name) {
+    List<T> firstList = new ArrayList<T>();
+    firstList.add(name);
+    List<List<T>> secondList = new ArrayList<List<T>>();
+    secondList.add(firstList);
+    return secondList;
+}
 
     //TODO: Refactor Method-2
     public  <T extends Object> Object  genericMethod(Object data) {
